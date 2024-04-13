@@ -7,3 +7,29 @@ i{
   font-size: 40px;
   margin-right: 20px;
 }
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li{
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.list-inline-item:not(:last-child)::after {
+  content: ".";
+  margin-left: 5px;
+}
+
+.list-inline-item:first-child a,
+.list-inline-item:last-child a {
+  color: #888;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
