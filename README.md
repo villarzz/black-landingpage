@@ -1,2 +1,2 @@
 # black-landingpage
-Repositóriopara praticar meus conhecimentos em angular
+Repositório para praticar meus conhecimentos em angular
