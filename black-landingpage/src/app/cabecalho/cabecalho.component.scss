@@ -21,7 +21,8 @@ li{
 
 .list-inline-item:not(:last-child)::after {
   content: ".";
-  margin-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .list-inline-item:first-child a,
@@ -32,4 +33,15 @@ li{
 a{
   text-decoration: none;
   color: white;
+}
+
+.actions{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.FAQ{
+  margin-top: 15px;
+  margin-right: 30px;
 }
