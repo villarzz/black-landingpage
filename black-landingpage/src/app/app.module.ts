@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { BtnGetstarttedComponent } from './btn-getstartted/btn-getstartted.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabecalhoComponent,
-    BtnGetstarttedComponent
+    BtnGetstarttedComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
