@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { BtnGetstarttedComponent } from './btn-getstartted/btn-getstartted.component';
 import { TitleComponent } from './title/title.component';
+import { NossosServicosComponent } from './nossos-servicos/nossos-servicos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabecalhoComponent,
     BtnGetstarttedComponent,
-    TitleComponent
+    TitleComponent,
+    NossosServicosComponent
   ],
   imports: [
     BrowserModule,
