@@ -7,6 +7,7 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { BtnGetstarttedComponent } from './btn-getstartted/btn-getstartted.component';
 import { TitleComponent } from './title/title.component';
 import { NossosServicosComponent } from './nossos-servicos/nossos-servicos.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NossosServicosComponent } from './nossos-servicos/nossos-servicos.compo
     CabecalhoComponent,
     BtnGetstarttedComponent,
     TitleComponent,
-    NossosServicosComponent
+    NossosServicosComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
