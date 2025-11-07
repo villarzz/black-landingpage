@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BtnGetstarttedComponent } from './btn-getstartted.component';
+import { BtnGetStartedComponent } from './btn-get-started.component';
 
-describe('BtnGetstarttedComponent', () => {
-  let component: BtnGetstarttedComponent;
-  let fixture: ComponentFixture<BtnGetstarttedComponent>;
+describe('BtnGetStartedComponent', () => {
+  let component: BtnGetStartedComponent;
+  let fixture: ComponentFixture<BtnGetStartedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BtnGetstarttedComponent]
+      declarations: [BtnGetStartedComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BtnGetstarttedComponent);
+    fixture = TestBed.createComponent(BtnGetStartedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

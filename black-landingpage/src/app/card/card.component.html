@@ -1,4 +1,4 @@
-<div class="card" [style.background-color]="bgColor">
+<article class="card" [style.background-color]="bgColor">
   <div class="card-body">
     <div class="row">
       <div class="col" id="category" [style.color]="txtColor">{{category}}</div>
@@ -6,6 +6,6 @@
     </div>
     <h3 class="card-title">{{title}}</h3>
     <p class="card-text" id="description" [style.color]="txtColor">{{description}}</p>
-    <a href="#">Ver Mais <i class="bi bi-arrow-right"></i></a>
+    <a href="javascript:void(0)" [attr.aria-label]="'Ver mais sobre ' + title">Ver Mais <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
   </div>
-</div>
+</article>
