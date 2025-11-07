@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TitleComponent } from './title.component';
+import { BtnGetStartedComponent } from '../btn-get-started/btn-get-started.component';
 
 describe('TitleComponent', () => {
   let component: TitleComponent;
@@ -8,7 +9,7 @@ describe('TitleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TitleComponent]
+      declarations: [TitleComponent, BtnGetStartedComponent]
     })
     .compileComponents();
     
