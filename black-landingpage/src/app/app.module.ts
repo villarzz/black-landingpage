@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
-import { BtnGetstarttedComponent } from './btn-getstartted/btn-getstartted.component';
+import { BtnGetStartedComponent } from './btn-get-started/btn-get-started.component';
 import { TitleComponent } from './title/title.component';
 import { NossosServicosComponent } from './nossos-servicos/nossos-servicos.component';
 import { CardComponent } from './card/card.component';
@@ -13,7 +13,7 @@ import { CardComponent } from './card/card.component';
   declarations: [
     AppComponent,
     CabecalhoComponent,
-    BtnGetstarttedComponent,
+    BtnGetStartedComponent,
     TitleComponent,
     NossosServicosComponent,
     CardComponent
