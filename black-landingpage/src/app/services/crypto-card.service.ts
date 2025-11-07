@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { CardData } from '../models/card.interface';
 
 /**
@@ -11,11 +12,12 @@ import { CardData } from '../models/card.interface';
 export class CryptoCardService {
 
   /**
-   * Retorna lista de cards de criptomoedas
-   * @returns Array de dados de cards
+   * Retorna lista de cards de criptomoedas como Observable
+   * Preparado para futura integração com API REST
+   * @returns Observable de array de dados de cards
    */
-  getCards(): CardData[] {
-    return [
+  getCards(): Observable<CardData[]> {
+    const cards: CardData[] = [
       {
         bgColor: 'black',
         txtColor: '#888',
@@ -41,5 +43,7 @@ export class CryptoCardService {
         description: 'Altcoins são criptomoedas alternativas ao Bitcoin, como Ethereum, Litecoin e Ripple.'
       }
     ];
+    
+    return of(cards);
   }
 }

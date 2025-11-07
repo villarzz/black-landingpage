@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NossosServicosComponent } from './nossos-servicos.component';
 import { CardComponent } from '../card/card.component';
 import { CryptoCardService } from '../services/crypto-card.service';
+import { of } from 'rxjs';
 
 describe('NossosServicosComponent', () => {
   let component: NossosServicosComponent;
@@ -24,12 +25,19 @@ describe('NossosServicosComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should load cards from service on init', () => {
-    const mockCards = service.getCards();
+  it('should load cards from service on init', (done) => {
+    spyOn(service, 'getCards').and.returnValue(of([
+      { bgColor: 'black', txtColor: 'white', category: 'CRYPTO', platform: 'Test', title: 'Test', description: 'Test' }
+    ]));
+    
     fixture.detectChanges();
     
-    expect(component.cards).toEqual(mockCards);
-    expect(component.cards.length).toBe(3);
+    component.ngOnInit();
+    
+    setTimeout(() => {
+      expect(component.cards.length).toBe(1);
+      done();
+    }, 0);
   });
 
   it('should render card components', () => {

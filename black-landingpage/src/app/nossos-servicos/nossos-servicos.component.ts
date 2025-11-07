@@ -18,6 +18,8 @@ export class NossosServicosComponent implements OnInit {
   constructor(private cryptoCardService: CryptoCardService) {}
 
   ngOnInit(): void {
-    this.cards = this.cryptoCardService.getCards();
+    this.cryptoCardService.getCards().subscribe(cards => {
+      this.cards = cards;
+    });
   }
 }
