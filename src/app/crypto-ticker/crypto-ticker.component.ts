@@ -8,7 +8,7 @@ import { CryptoPrice } from '../models/crypto-price.interface';
 @Component({
   selector: 'app-crypto-ticker',
   templateUrl: './crypto-ticker.component.html',
-  styleUrl: './crypto-ticker.component.scss',
+  styleUrl: './crypto-ticker.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CryptoTickerComponent implements OnInit, OnDestroy {

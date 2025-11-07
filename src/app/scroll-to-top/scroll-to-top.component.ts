@@ -7,7 +7,7 @@ import { Component, ChangeDetectionStrategy, HostListener, ChangeDetectorRef } f
 @Component({
   selector: 'app-scroll-to-top',
   templateUrl: './scroll-to-top.component.html',
-  styleUrl: './scroll-to-top.component.scss',
+  styleUrl: './scroll-to-top.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ScrollToTopComponent {

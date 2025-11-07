@@ -1,0 +1,82 @@
+.faq-section {
+  @apply py-16 bg-black;
+}
+
+.faq-section .section-title {
+  @apply text-white text-5xl font-bold mb-4;
+}
+
+.faq-section .section-subtitle {
+  @apply text-gray-500 text-lg mb-8;
+}
+
+.faq-section .accordion .faq-item {
+  @apply bg-[#1a1a1a] border border-[#222] rounded-[10px] mb-4 overflow-hidden transition-all duration-300;
+}
+
+.faq-section .accordion .faq-item.active {
+  @apply border-blue-600;
+  box-shadow: 0 5px 20px rgba(13, 110, 253, 0.2);
+}
+
+.faq-section .accordion .faq-item .accordion-header {
+  @apply mb-0;
+}
+
+.faq-section .accordion .faq-item .faq-question {
+  @apply bg-transparent border-0 text-white p-6 w-full text-left text-lg font-semibold flex items-center gap-4 cursor-pointer transition-all duration-300;
+}
+
+.faq-section .accordion .faq-item .faq-question:hover {
+  @apply bg-[#222];
+}
+
+.faq-section .accordion .faq-item .faq-question:focus {
+  @apply shadow-none outline-none;
+}
+
+.faq-section .accordion .faq-item .faq-question .question-number {
+  @apply text-blue-600 font-bold min-w-[30px];
+}
+
+.faq-section .accordion .faq-item .faq-question .chevron-icon {
+  @apply ml-auto text-xl text-blue-600 transition-transform duration-300;
+}
+
+.faq-section .accordion .faq-item .faq-question.collapsed .chevron-icon {
+  @apply rotate-0;
+}
+
+.faq-section .accordion .faq-item .faq-question:not(.collapsed) .chevron-icon {
+  @apply rotate-180;
+}
+
+.faq-section .accordion .faq-item .accordion-collapse {
+  @apply max-h-0 overflow-hidden transition-all duration-300;
+}
+
+.faq-section .accordion .faq-item .accordion-collapse.show {
+  @apply max-h-[500px];
+}
+
+.faq-section .accordion .faq-item .faq-answer {
+  @apply text-gray-300 px-6 pb-6 pl-[4.5rem] leading-relaxed text-base;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    @apply py-12;
+  }
+
+  .faq-section .section-title {
+    @apply text-4xl;
+  }
+
+  .faq-section .faq-item .faq-question {
+    @apply text-base p-4;
+  }
+
+  .faq-section .faq-item .faq-answer {
+    @apply px-4 pb-4 pl-12 text-sm;
+  }
+}

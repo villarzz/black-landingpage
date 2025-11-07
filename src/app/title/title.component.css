@@ -1,0 +1,19 @@
+#title {
+  @apply mt-[150px];
+}
+
+h1 {
+  @apply text-[80px];
+}
+
+p {
+  @apply text-xl tracking-[2px] font-bold;
+}
+
+.currency {
+  @apply text-gray-500;
+}
+
+.btn-wrapper {
+  @apply mt-12;
+}

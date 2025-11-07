@@ -1,0 +1,70 @@
+.testimonials-section {
+  @apply py-16 bg-[#0a0a0a];
+}
+
+.testimonials-section .section-title {
+  @apply text-white text-5xl font-bold mb-4;
+}
+
+.testimonials-section .section-subtitle {
+  @apply text-gray-500 text-lg;
+}
+
+.testimonials-section .testimonial-card {
+  @apply bg-[#1a1a1a] rounded-[15px] p-8 h-full transition-all duration-300 border border-[#222];
+}
+
+.testimonials-section .testimonial-card:hover {
+  @apply -translate-y-1 border-blue-600;
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.2);
+}
+
+.testimonials-section .testimonial-card .testimonial-header {
+  @apply flex items-center mb-6;
+}
+
+.testimonials-section .testimonial-card .testimonial-header .avatar-placeholder {
+  @apply w-[60px] h-[60px] bg-blue-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0;
+}
+
+.testimonials-section .testimonial-card .testimonial-header .avatar-placeholder i {
+  @apply text-[2.5rem] text-white;
+}
+
+.testimonials-section .testimonial-card .testimonial-header .testimonial-info {
+  @apply flex-grow;
+}
+
+.testimonials-section .testimonial-card .testimonial-header .testimonial-info .testimonial-name {
+  @apply text-white font-semibold mb-1 text-lg;
+}
+
+.testimonials-section .testimonial-card .testimonial-header .testimonial-info .testimonial-role {
+  @apply text-gray-500 text-sm mb-0;
+}
+
+.testimonials-section .testimonial-card .testimonial-rating {
+  @apply mb-4;
+}
+
+.testimonials-section .testimonial-card .testimonial-rating i {
+  @apply text-yellow-400 text-base mr-1;
+}
+
+.testimonials-section .testimonial-card .testimonial-content {
+  @apply text-gray-300 italic leading-relaxed mb-0 relative;
+}
+
+.testimonials-section .testimonial-card .testimonial-content .quote-icon {
+  @apply text-4xl text-blue-600 opacity-30 absolute -top-2.5 -left-2.5;
+}
+
+@media (max-width: 768px) {
+  .testimonials-section .section-title {
+    @apply text-4xl;
+  }
+
+  .testimonials-section .testimonial-card {
+    @apply mb-6;
+  }
+}

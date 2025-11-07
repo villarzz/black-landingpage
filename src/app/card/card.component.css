@@ -1,0 +1,23 @@
+.card {
+  @apply text-white border-gray-500;
+}
+
+#category {
+  @apply text-gray-500;
+}
+
+#platform {
+  @apply text-gray-500;
+}
+
+h3 {
+  @apply mt-8;
+}
+
+#description {
+  @apply text-gray-500;
+}
+
+a {
+  @apply text-white no-underline;
+}

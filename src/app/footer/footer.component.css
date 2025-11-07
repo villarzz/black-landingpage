@@ -1,0 +1,67 @@
+.footer {
+  @apply bg-[#0a0a0a] text-gray-500 border-t border-[#222];
+}
+
+.footer .footer-title {
+  @apply text-white font-bold mb-4;
+}
+
+.footer .footer-subtitle {
+  @apply text-gray-300 font-semibold mb-4 uppercase text-sm;
+}
+
+.footer .footer-text {
+  @apply text-gray-400 text-sm leading-relaxed;
+}
+
+.footer .social-links {
+  @apply flex gap-4;
+}
+
+.footer .social-links .social-icon {
+  @apply inline-flex items-center justify-center w-10 h-10 bg-[#1a1a1a] rounded-full text-gray-500 no-underline transition-all duration-300;
+}
+
+.footer .social-links .social-icon:hover {
+  @apply bg-blue-600 text-white -translate-y-1;
+}
+
+.footer .social-links .social-icon i {
+  @apply text-xl;
+}
+
+.footer .footer-links li {
+  @apply mb-2;
+}
+
+.footer .footer-links li a {
+  @apply text-gray-500 no-underline transition-colors duration-300 text-sm;
+}
+
+.footer .footer-links li a:hover {
+  @apply text-blue-600 pl-1;
+}
+
+.footer .footer-contact li {
+  @apply flex items-center mb-3 text-gray-500 text-sm;
+}
+
+.footer .footer-contact li i {
+  @apply mr-2 text-blue-600 text-base;
+}
+
+.footer .footer-copyright {
+  @apply text-gray-600 text-sm;
+}
+
+.footer .footer-legal {
+  @apply text-gray-500 no-underline text-sm transition-colors duration-300;
+}
+
+.footer .footer-legal:hover {
+  @apply text-blue-600;
+}
+
+.footer .border-top {
+  @apply border-[#222];
+}

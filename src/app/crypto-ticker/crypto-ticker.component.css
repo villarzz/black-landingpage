@@ -1,0 +1,93 @@
+.crypto-ticker {
+  background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  @apply border-t border-b border-[#222] py-4 sticky top-0 z-[100];
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.crypto-ticker .ticker-container {
+  @apply flex items-center overflow-hidden;
+}
+
+.crypto-ticker .ticker-container .ticker-label {
+  @apply bg-blue-600 text-white px-6 py-2 rounded-[20px] font-semibold flex items-center gap-2 mr-8 flex-shrink-0;
+  box-shadow: 0 2px 10px rgba(13, 110, 253, 0.3);
+}
+
+.crypto-ticker .ticker-container .ticker-label i {
+  @apply text-xl;
+}
+
+.crypto-ticker .ticker-container .ticker-scroll {
+  @apply flex-1 overflow-hidden flex gap-12;
+}
+
+.crypto-ticker .ticker-container .ticker-scroll .ticker-content {
+  animation: scroll 30s linear infinite;
+}
+
+.crypto-ticker .ticker-container .ticker-scroll .crypto-item {
+  @apply inline-flex items-center gap-4 whitespace-nowrap px-4 py-2 bg-[#1a1a1a] rounded-[10px] border border-[#222];
+}
+
+.crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-symbol {
+  @apply text-blue-600 font-bold text-lg;
+}
+
+.crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-price {
+  @apply text-white font-semibold text-base;
+}
+
+.crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-change {
+  @apply font-semibold text-sm flex items-center gap-1;
+}
+
+.crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-change.positive {
+  @apply text-green-600;
+}
+
+.crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-change.negative {
+  @apply text-red-600;
+}
+
+.crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-change i {
+  @apply text-xs;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .crypto-ticker .ticker-container .ticker-label {
+    @apply px-4 py-1.5 text-sm mr-4;
+  }
+
+  .crypto-ticker .ticker-container .ticker-label span {
+    @apply hidden;
+  }
+
+  .crypto-ticker .ticker-container .ticker-scroll {
+    @apply gap-6;
+  }
+
+  .crypto-ticker .ticker-container .ticker-scroll .crypto-item {
+    @apply px-3 py-1.5 gap-2;
+  }
+
+  .crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-symbol {
+    @apply text-sm;
+  }
+
+  .crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-price {
+    @apply text-[13px];
+  }
+
+  .crypto-ticker .ticker-container .ticker-scroll .crypto-item .crypto-change {
+    @apply text-xs;
+  }
+}

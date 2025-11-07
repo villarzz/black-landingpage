@@ -7,7 +7,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 @Component({
   selector: 'app-btn-get-started',
   templateUrl: './btn-get-started.component.html',
-  styleUrl: './btn-get-started.component.scss',
+  styleUrl: './btn-get-started.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BtnGetStartedComponent {
