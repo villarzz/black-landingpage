@@ -1,0 +1,39 @@
+<section class="newsletter-section" aria-label="Newsletter subscription">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">Fique por Dentro das Novidades</h2>
+          <p class="newsletter-description">
+            Receba atualizações sobre o mercado de criptomoedas, dicas de investimento 
+            e notícias exclusivas diretamente no seu email.
+          </p>
+          <form (ngSubmit)="onSubmit()" class="newsletter-form">
+            <div class="input-group">
+              <input 
+                type="email" 
+                class="form-control newsletter-input" 
+                placeholder="Digite seu melhor email"
+                [(ngModel)]="email"
+                name="email"
+                required
+                aria-label="Email para newsletter"
+              >
+              <button 
+                type="submit" 
+                class="btn btn-primary newsletter-btn"
+                [disabled]="!email"
+              >
+                <i class="bi bi-send-fill" aria-hidden="true"></i>
+                Inscrever-se
+              </button>
+            </div>
+            <small class="form-text">
+              Não compartilhamos seu email com terceiros. Você pode cancelar a qualquer momento.
+            </small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

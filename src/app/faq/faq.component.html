@@ -1,0 +1,50 @@
+<section id="faq" class="faq-section" aria-label="Frequently asked questions">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col text-center">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">Encontre respostas para as dúvidas mais comuns</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAccordion">
+          <div 
+            class="accordion-item faq-item" 
+            *ngFor="let item of faqItems; let i = index"
+            [class.active]="item.isOpen"
+          >
+            <h3 class="accordion-header">
+              <button 
+                class="accordion-button faq-question"
+                [class.collapsed]="!item.isOpen"
+                type="button"
+                (click)="toggleFaq(i)"
+                [attr.aria-expanded]="item.isOpen"
+                [attr.aria-controls]="'faq-collapse-' + i"
+              >
+                <span class="question-number">{{ i + 1 }}.</span>
+                {{ item.question }}
+                <i 
+                  class="bi chevron-icon"
+                  [ngClass]="item.isOpen ? 'bi-chevron-up' : 'bi-chevron-down'"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </h3>
+            <div 
+              [id]="'faq-collapse-' + i"
+              class="accordion-collapse"
+              [class.show]="item.isOpen"
+            >
+              <div class="accordion-body faq-answer">
+                {{ item.answer }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

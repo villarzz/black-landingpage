@@ -14,6 +14,11 @@ Este projeto é uma landing page para uma agência de criptomoedas que oferece s
 - **Performance Otimizada**: Uso de OnPush change detection strategy
 - **Acessibilidade**: Implementação de ARIA labels e HTML semântico
 - **TypeScript**: Tipagem forte para maior segurança no código
+- **Ticker de Preços**: Preços de criptomoedas atualizados em tempo real
+- **Newsletter**: Sistema de captura de leads integrado
+- **Depoimentos**: Seção de feedback de clientes com avaliações
+- **FAQ Interativo**: Perguntas frequentes com acordeão expansível
+- **Scroll Suave**: Navegação fluida e botão de retorno ao topo
 
 ## 🛠️ Tecnologias
 
@@ -76,9 +81,16 @@ src/app/
 ├── btn-get-started/     # Componente de botão CTA
 ├── cabecalho/           # Componente de cabeçalho/navegação
 ├── card/                # Componente de card reutilizável
+├── crypto-ticker/       # Ticker de preços de criptomoedas
+├── faq/                 # Seção de perguntas frequentes
+├── footer/              # Rodapé com links e informações
+├── newsletter/          # Formulário de inscrição newsletter
 ├── nossos-servicos/     # Seção de serviços
+├── scroll-to-top/       # Botão de voltar ao topo
+├── testimonials/        # Depoimentos de clientes
 ├── title/               # Componente de título principal
 ├── models/              # Interfaces e tipos TypeScript
+├── services/            # Serviços e lógica de negócio
 └── app.module.ts        # Módulo principal
 ```
 
@@ -106,6 +118,55 @@ Componente reutilizável para exibir informações de criptomoedas.
   [description]="'Bitcoin: pioneiro das criptomoedas'">
 </app-card>
 ```
+
+### FooterComponent
+Rodapé completo com informações de contato, links rápidos e redes sociais.
+
+**Características:**
+- Links para serviços e páginas
+- Ícones de redes sociais com hover effects
+- Informações de contato
+- Links legais (Política de Privacidade, Termos de Uso)
+
+### NewsletterComponent
+Formulário de captura de leads para inscrição na newsletter.
+
+**Características:**
+- Validação de email
+- Design responsivo
+- Feedback visual ao usuário
+
+### TestimonialsComponent
+Seção de depoimentos de clientes com avaliações.
+
+**Características:**
+- Cards de depoimentos com animação
+- Sistema de avaliação por estrelas
+- Avatares de clientes
+
+### FaqComponent
+Seção de perguntas frequentes com acordeão expansível.
+
+**Características:**
+- 6 perguntas e respostas comuns
+- Animações suaves de abertura/fechamento
+- Design intuitivo e acessível
+
+### CryptoTickerComponent
+Banner sticky com preços de criptomoedas em tempo real (simulado).
+
+**Características:**
+- Atualização automática de preços
+- Indicadores de alta/baixa
+- Design responsivo e animado
+
+### ScrollToTopComponent
+Botão flutuante para retornar ao topo da página.
+
+**Características:**
+- Aparece após rolar 300px
+- Animação suave de scroll
+- Design com gradiente
 
 ## 🔒 Segurança
 

@@ -1,0 +1,40 @@
+<section class="testimonials-section" aria-label="Client testimonials">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col text-center">
+        <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+        <p class="section-subtitle">Depoimentos reais de clientes satisfeitos</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let testimonial of testimonials">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar-placeholder">
+              <i class="bi bi-person-circle" aria-hidden="true"></i>
+            </div>
+            <div class="testimonial-info">
+              <h5 class="testimonial-name">{{ testimonial.name }}</h5>
+              <p class="testimonial-role">{{ testimonial.role }} - {{ testimonial.company }}</p>
+            </div>
+          </div>
+          
+          <div class="testimonial-rating">
+            <i 
+              *ngFor="let star of testimonial.stars"
+              class="bi"
+              [ngClass]="star ? 'bi-star-fill' : 'bi-star'"
+              aria-hidden="true"
+            ></i>
+          </div>
+          
+          <blockquote class="testimonial-content">
+            <i class="bi bi-quote quote-icon" aria-hidden="true"></i>
+            {{ testimonial.content }}
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

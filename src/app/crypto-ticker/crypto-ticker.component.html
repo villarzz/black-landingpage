@@ -1,0 +1,28 @@
+<section class="crypto-ticker" aria-label="Cryptocurrency price ticker">
+  <div class="ticker-container">
+    <div class="ticker-label">
+      <i class="bi bi-graph-up" aria-hidden="true"></i>
+      <span>Preços ao Vivo</span>
+    </div>
+    <div class="ticker-scroll">
+      <div class="ticker-content" *ngFor="let crypto of cryptoPrices">
+        <div class="crypto-item">
+          <span class="crypto-symbol">{{ crypto.symbol }}</span>
+          <span class="crypto-price">${{ formatPrice(crypto.price) }}</span>
+          <span 
+            class="crypto-change"
+            [class.positive]="crypto.changePercent > 0"
+            [class.negative]="crypto.changePercent < 0"
+          >
+            <i 
+              class="bi"
+              [ngClass]="crypto.changePercent > 0 ? 'bi-caret-up-fill' : 'bi-caret-down-fill'"
+              aria-hidden="true"
+            ></i>
+            {{ formatChange(crypto.changePercent) }}%
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
