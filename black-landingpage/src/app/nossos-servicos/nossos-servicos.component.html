@@ -10,34 +10,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col" *ngFor="let card of cards">
       <app-card
-        [bgColor]="'black'"
-        [txtColor]="'#888'"
-        [category]="'CRYPTO'"
-        [platform]="'Dashboard'"
-        [title]="'Bitcoin'"
-        [description]="'Bitcoin: pioneiro das criptomoedas, revolucionando finanças e tecnologia.'"
-      ></app-card>
-    </div>
-    <div class="col">
-      <app-card
-        [bgColor]="'#0d6efd'"
-        [txtColor]="'white'"
-        [category]="'CRYPTO'"
-        [platform]="'Mobile App'"
-        [title]="'Ethereum'"
-        [description]="'O Ethereum: plataforma blockchain e criptomoeda Ether (ETH).'"
-      ></app-card>
-    </div>
-    <div class="col">
-      <app-card
-        [bgColor]="'black'"
-        [txtColor]="'#888'"
-        [category]="'CRYPTO'"
-        [platform]="'Dashboard'"
-        [title]="'Altcoin'"
-        [description]="'Altcoins são criptomoedas alternativas ao Bitcoin, como Ethereum, Litecoin e Ripple.'"
+        [bgColor]="card.bgColor"
+        [txtColor]="card.txtColor"
+        [category]="card.category"
+        [platform]="card.platform"
+        [title]="card.title"
+        [description]="card.description"
       ></app-card>
     </div>
   </div>
