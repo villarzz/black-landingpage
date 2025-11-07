@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnInit, OnDestroy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { CryptoPrice } from '../models/crypto-price.interface';
 
 /**
@@ -21,6 +21,8 @@ export class CryptoTickerComponent implements OnInit, OnDestroy {
   ];
 
   private intervalId?: number;
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     // Simula atualização de preços a cada 5 segundos
@@ -45,6 +47,7 @@ export class CryptoTickerComponent implements OnInit, OnDestroy {
         changePercent
       };
     });
+    this.cdr.markForCheck();
   }
 
   formatPrice(price: number): string {

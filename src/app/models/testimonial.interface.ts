@@ -4,5 +4,5 @@ export interface Testimonial {
   company: string;
   content: string;
   rating: number;
-  avatar?: string;
+  stars?: boolean[];
 }

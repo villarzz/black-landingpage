@@ -22,7 +22,7 @@
           
           <div class="testimonial-rating">
             <i 
-              *ngFor="let star of getStarArray(testimonial.rating)"
+              *ngFor="let star of testimonial.stars"
               class="bi"
               [ngClass]="star ? 'bi-star-fill' : 'bi-star'"
               aria-hidden="true"

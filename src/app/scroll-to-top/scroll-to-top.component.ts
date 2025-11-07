@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, HostListener } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostListener, ChangeDetectorRef } from '@angular/core';
 
 /**
  * Componente de botão scroll-to-top
@@ -13,9 +13,15 @@ import { Component, ChangeDetectionStrategy, HostListener } from '@angular/core'
 export class ScrollToTopComponent {
   isVisible = false;
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
   @HostListener('window:scroll')
   onWindowScroll(): void {
-    this.isVisible = window.pageYOffset > 300;
+    const visible = window.pageYOffset > 300;
+    if (visible !== this.isVisible) {
+      this.isVisible = visible;
+      this.cdr.markForCheck();
+    }
   }
 
   scrollToTop(): void {

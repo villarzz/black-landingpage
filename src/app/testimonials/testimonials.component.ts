@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Testimonial } from '../models/testimonial.interface';
 
 /**
@@ -11,7 +11,7 @@ import { Testimonial } from '../models/testimonial.interface';
   styleUrl: './testimonials.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TestimonialsComponent {
+export class TestimonialsComponent implements OnInit {
   testimonials: Testimonial[] = [
     {
       name: 'Maria Silva',
@@ -36,7 +36,15 @@ export class TestimonialsComponent {
     }
   ];
 
-  getStarArray(rating: number): boolean[] {
+  ngOnInit(): void {
+    // Pre-calculate star arrays to avoid re-renders
+    this.testimonials = this.testimonials.map(testimonial => ({
+      ...testimonial,
+      stars: this.getStarArray(testimonial.rating)
+    }));
+  }
+
+  private getStarArray(rating: number): boolean[] {
     return Array(5).fill(false).map((_, index) => index < rating);
   }
 }
