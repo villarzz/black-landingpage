@@ -8,7 +8,7 @@ import { Testimonial } from '../models/testimonial.interface';
 @Component({
   selector: 'app-testimonials',
   templateUrl: './testimonials.component.html',
-  styleUrl: './testimonials.component.scss',
+  styleUrl: './testimonials.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TestimonialsComponent implements OnInit {

@@ -8,7 +8,7 @@ import { FaqItem } from '../models/faq.interface';
 @Component({
   selector: 'app-faq',
   templateUrl: './faq.component.html',
-  styleUrl: './faq.component.scss',
+  styleUrl: './faq.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FaqComponent {

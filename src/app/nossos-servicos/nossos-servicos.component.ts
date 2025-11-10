@@ -9,7 +9,7 @@ import { CardData } from '../models/card.interface';
 @Component({
   selector: 'app-nossos-servicos',
   templateUrl: './nossos-servicos.component.html',
-  styleUrl: './nossos-servicos.component.scss',
+  styleUrl: './nossos-servicos.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NossosServicosComponent implements OnInit {

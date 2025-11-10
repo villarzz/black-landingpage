@@ -1,0 +1,37 @@
+p {
+  @apply flex items-center;
+}
+
+i {
+  @apply text-[40px] mr-5;
+}
+
+ul {
+  @apply flex justify-center items-center;
+}
+
+li {
+  @apply mt-5 text-[15px];
+}
+
+.list-inline-item:not(:last-child)::after {
+  content: ".";
+  @apply ml-2.5 mr-2.5;
+}
+
+.list-inline-item:first-child a,
+.list-inline-item:last-child a {
+  @apply text-gray-500;
+}
+
+a {
+  @apply no-underline text-white;
+}
+
+.actions {
+  @apply flex justify-end items-center;
+}
+
+.FAQ {
+  @apply mt-4 mr-8;
+}

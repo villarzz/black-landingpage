@@ -24,9 +24,9 @@ Este projeto é uma landing page para uma agência de criptomoedas que oferece s
 
 - Angular 17.3.4
 - TypeScript 5.4.2
+- Tailwind CSS 3.x
 - Bootstrap 5.3.3
 - Bootstrap Icons 1.11.3
-- SCSS
 
 ## 📋 Pré-requisitos
 
