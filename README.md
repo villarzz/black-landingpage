@@ -66,6 +66,38 @@ npm run build
 
 Os arquivos serão gerados no diretório `dist/`.
 
+## 🚀 Deploy
+
+### Vercel
+
+Este projeto está configurado para deploy no Vercel. Para fazer o deploy:
+
+#### Opção 1: Via Vercel CLI
+
+```bash
+# Instalar o Vercel CLI globalmente
+npm install -g vercel
+
+# Fazer login no Vercel
+vercel login
+
+# Deploy de preview
+vercel
+
+# Deploy de produção
+vercel --prod
+```
+
+#### Opção 2: Via Dashboard do Vercel
+
+1. Acesse [vercel.com](https://vercel.com) e faça login
+2. Clique em "New Project"
+3. Importe este repositório do GitHub
+4. O Vercel detectará automaticamente as configurações do `vercel.json`
+5. Clique em "Deploy"
+
+O projeto será automaticamente re-deployado a cada push na branch principal.
+
 ## 🧪 Testes
 
 Execute os testes unitários:
